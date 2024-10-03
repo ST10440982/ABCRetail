@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="container mt-5">
+    <!-- Hero Section -->
+    <div class="jumbotron text-center bg-primary text-white">
+        <h1 class="display-4">Welcome to ABC Retail!</h1>
+        <p class="lead">Experience seamless order tracking, personalized offers, and real-time updates with our innovative platform.</p>
+        <hr class="my-4">
+        <p>Start exploring our services or track your recent orders with just one click.</p>
+        <a class="btn btn-light btn-lg" href="/Orders/Track" role="button">Track Orders</a>
+        <a class="btn btn-warning btn-lg" href="/Account/Register" role="button">Register Now</a>
+    </div>
+
+    <!-- Features Section -->
+    <div class="row text-center mt-5">
+        <div class="col-md-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Real-Time Order Tracking</h5>
+                    <p class="card-text">Get live updates on your orders, payments, and shipments, enhancing transparency and engagement.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Personalized Offers</h5>
+                    <p class="card-text">Receive customized offers based on your preferences, making your shopping experience more relevant.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Predictive Analytics</h5>
+                    <p class="card-text">Stay informed with predictive insights such as stock availability and delivery estimates.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action Section -->
+    <div class="text-center mt-5">
+        <h2>Ready to enhance your shopping experience?</h2>
+        <p>Join ABC Retail now to access real-time order tracking and exclusive offers!</p>
+        <a class="btn btn-success btn-lg" href="/Account/Login" role="button">Sign In</a>
+    </div>
+</div>
+
+<form asp-controller="Order" asp-action="UploadImage" enctype="multipart/form-data" method="post">
+    <input type="file" name="file" />
+    <button type="submit">Upload Image</button>
+</form>
+
+<form asp-controller="Order" asp-action="LogContact" method="post">
+    <textarea name="contactInfo" placeholder="Enter contact info"></textarea>
+    <button type="submit">Log Contact</button>
+</form>
+
+<!-- Optional Bootstrap CDN for Styling -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFM9o4x2eQ39HY5HtHf5xjPcKfyc8hs2bBfL5" crossorigin="anonymous">
